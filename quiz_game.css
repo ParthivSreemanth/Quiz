@@ -1,0 +1,44 @@
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s { 
+    
+    margin-top: 10%;
+    display: none;
+}
+.r{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+
+}
+
+
+
+ul{
+    list-style-type: none;
+}
+body{
+    background: linear-gradient(to right, #45e6f2, #d750f2);
+    display: grid;
+    place-items: center;
+}
+button{
+background-color: #03e428;
+width: 100%;
+border: none;
+color: #fff;
+font-family: Georgia, 'Times New Roman', Times, serif;
+padding: 1%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+button:hover{
+background-color: #0c9417;
+}

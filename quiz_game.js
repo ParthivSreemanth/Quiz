@@ -8,11 +8,11 @@ const questions = [
     correct : "b",
     },
     {
-        question : "2) Who was Elected as the new Cheif Minsiter of Telangana ?",
-        a : "KTR",
-        b : "KCR",
-        c : "Revanth Reddy",
-        d : "Bhatti Vikramarka",
+        question : "2) Neil Armstrong landed on the moon in the year ?",
+        a : "1971",
+        b : "1970",
+        c : "1969",
+        d : "1968",
         correct : "c",
         },
         {
@@ -102,8 +102,8 @@ let score = 0;
 let timeLeft = 120;
 
 
-loadQuiz();
-startTimer();
+
+
 
 
 function loadQuiz(){
@@ -123,15 +123,7 @@ function deselectAnswers(){
     answerEls.forEach(answerEls => answerEls.checked = false);
 }
 
-/*function getSelected(){
-    let answerEls
-    answerEls.forEach(answerEl => {
-        if(answerEl.checked){
-            answer = answerEl.id
-        }
-        return answer;
-    })
-}*/
+
 
 function getSelected(){
     let answer;  // Declare the variable only once
@@ -179,7 +171,7 @@ submit_button.addEventListener('click', () => {
 
 function finishQuiz(){
     
-   // quiz.innerHTML = `Quiz Completed! Your score is ${score}/${questions.length}`;
+   //quiz.innerHTML = `Quiz Completed! Your score is ${score}/${questions.length}`;
     //timerEl.innerText = "Time's up!";
     if(score>=8){
     quiz.innerHTML = `Quiz Completed! Your score is ${score}/${questions.length}<br>`;
@@ -196,7 +188,21 @@ function finishQuiz(){
 
     }
 }
-function showSecondCard(){
-    document.getElementById("firstcard").style.display='none';
-    document.getElementById("secondcard").style.display='block';
+function showSecondCard() {
+    var userName = document.getElementById('User_name').value;
+    if (userName.trim() !== "") {
+        document.getElementById('firstcard').style.display = 'none'; // Hide the first card
+        document.getElementById('secondcard').style.display = 'block';
+        document.getElementById('nextButton').disabled = true; // Disable button after clicking
+    } else {
+        alert('Please enter your name.');
+    }
+}
+
+function showQuizCard() {
+    document.getElementById('secondcard').style.display = 'none';
+    document.getElementById('thirdcard').style.display = 'block';
+    document.body.classList.add('quiz-background');
+    startTimer();
+    loadQuiz();
 }

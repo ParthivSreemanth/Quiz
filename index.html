@@ -2,62 +2,67 @@
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" >
-    <link rel = "stylesheet" href = "quiz_game.css">
-
-    
-    
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="quiz_game.css">
 </head>
 <body>
-  
-    <div class = "r" id = "firstcard">
-    <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded border border-black" style="width:100%;max-width: 600px;">
-        <h3><b>Online Quiz</b></h3>
-        <h6>Rules & Instructions</h6>
-        <ol>
-            <li>There are total 10 Multiple choice questions</li>
-            <li>The time limit is only 2mins for all the questions</li>
-            <li>Minimum pass mark is 8</li>
-            <li>No Negative marking</li>
-        </ol>
-        <button onclick="showSecondCard()">Start</button>
+    <div class="center" id="firstcard">
+        <div class="card neon-border" style="width:110%;height: 50%;">
+            <h2><b>Online Quiz</b></h2>
+            <hr color="black" noshade>
+            <h6>"Hello! and Welcome to our quiz session"</h6>
+            <h6 style="color: maroon">To participate in this event, please enter your name below</h6>
+            <div class="mb-3 mt-3 col-7 mx-auto">
+                <input type="text" class="form-control" id="User_name" placeholder="Enter your name">
+            </div>
+            <button class="col-2 mx-auto rounded" onclick="showSecondCard()" id="nextButton">Next >></button>
+        </div>
     </div>
+
+    <div class="r" id="secondcard" style="display: none;">
+        <div class="card neon-border" style = "width:500px;height: 300px;">
+            <h4>Rules & Instructions</h4>
+            <ol>
+                <li>There are total 10 Multiple choice questions</li>
+                <li class = "mt-2">The time limit is only 2mins for all the questions</li>
+                <li class = "mt-2">Minimum pass mark is 8</li>
+                <li class = "mt-2">No Negative marking</li>
+            </ol>
+            <h5><i>"Wishing you all the best"</i></h5>
+            <button class="col-2 mx-auto rounded mt-2" onclick="showQuizCard()">Start</button>
+            
+        </div>
     </div>
-    
-    <div class="s" id = "secondcard">
-        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded border border-black" style="width:100%;max-width: 600px;" id="quiz">
+
+    <div class="s" id="thirdcard" style="display: none;">
+        <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded border border-black mx-auto" style="width:100%;max-width: 600px;" id="quiz">
             <div class="card-body">
-               
                 <h4 class="card-text" id="question">Question goes here</h4>
-                
                 <ul>
                     <li>
-                        <input type="radio" name="answer" id="a" class = "answer">
+                        <input type="radio" name="answer" id="a" class="answer">
                         <label for="a" id="a_text">Answer</label>
                     </li>
                     <li class="mt-2">
-                        <input type="radio" name="answer" id="b" class = "answer">
+                        <input type="radio" name="answer" id="b" class="answer">
                         <label for="b" id="b_text">Answer</label>
                     </li>
                     <li class="mt-2">
-                        <input type="radio" name="answer" id="c" class = "answer">
+                        <input type="radio" name="answer" id="c" class="answer">
                         <label for="c" id="c_text">Answer</label>
                     </li>
                     <li class="mt-2">
-                        <input type="radio" name="answer" id="d" class = "answer">
+                        <input type="radio" name="answer" id="d" class="answer">
                         <label for="d" id="d_text">Answer</label>
                     </li>
                 </ul>
                 <p id="timer"></p>
-                
-                <button id="submit">Submit</button>
+                <button class="col-2 mx-auto rounded" id="submit">Submit</button>
             </div>
-            </div>
+        </div>
     </div>
-    
-    
-    
-    
+
     <script src="quiz_game.js"></script>
+    
 </body>
 </html>

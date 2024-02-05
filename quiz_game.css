@@ -1,19 +1,71 @@
+
+
 h3{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.s { 
-    
-    margin-top: 10%;
-    display: none;
-}
-.r{
-    
+h2{
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15%;
+}
+h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s { 
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 10%;
+
+   
+}
+.r{
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+
+}
+hr{
+    color:rgb(235, 234, 234);
+    height: 2px;
+}
+
+    .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    
+}
+
+
+  .neon-border {
+    border: 2px solid cyan; /* Neon green color */
+    box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan; /* Neon glow effect */
+    color:
+}
+
+h6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 
 }
 
@@ -23,7 +75,7 @@ ul{
     list-style-type: none;
 }
 body{
-    background: linear-gradient(to right, #45e6f2, #d750f2);
+    background-image: url('https://media.istockphoto.com/id/1478776181/video/flying-pink-neon-question-marks-on-a-black-background-3d-animation-question-mark-looping.jpg?s=640x640&k=20&c=5iaBIXjs7ydswVcvKqjjqRySe6ksY2njjWn4h3SYQFQ=');
     display: grid;
     place-items: center;
 }
@@ -41,4 +93,8 @@ justify-content: center;
 }
 button:hover{
 background-color: #0c9417;
+}
+body.quiz-background {
+    background: linear-gradient(to right, #b33cd1, #f09e06);
+    /* You can customize the gradient colors as needed */
 }
